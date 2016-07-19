@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/infoheader"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoLink="all"
+            android:text="@string/infoheader" />
+
+        <Button
+            android:id="@+id/disablelauncher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
+            android:onClick="disablelauncher"
+            android:text="@string/disablelauncher" />
+
+        <TextView
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoLink="all"
+            android:text="@string/infobody" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dark" />
+
+        <TextView
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoLink="all"
+            android:text="@string/infofooter" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_share"
+            android:onClick="shareurl"
+            android:text="@string/sharelink" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:onClick="postcomment"
+            android:text="@string/postcomment" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_preferences"
+            android:onClick="showappsettings"
+            android:text="@string/appsettings" />
+
+        <TextView
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autoLink="all"
+            android:text="@string/infosubfooter" />
+    </LinearLayout>
+
+</ScrollView>

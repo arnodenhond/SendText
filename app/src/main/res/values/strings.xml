@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SendText</string>
+    <string name="header">%1$s v%2$d by Arno den Hond © 2016</string>
+    <string name="infoheader">This app only provides a launcher shortcut to show the instructions below.</string>
+    <string name="infobody"><b>Send Text to any app that can send text.</b>\nUsage Instructions:\n<li>Edit the Quick Settings Tiles and add Send Text</li>\n<li>Select the Send Text Tile and type the text in the notification</li>\n<li>Select the app or contact to send the text to</li></string>
+    <string name="infofooter">Please support open source software\nhttps://github.com/arnodenhond/SendText</string>
+    <string name="infosubfooter">Press back to close this screen.</string>
+    <string name="sharelink">Share this app</string>
+    <string name="postcomment">Post a rating</string>
+    <string name="appsettings">App settings</string>
+    <string name="disablelauncher">Disable launcher shortcut</string>
+    <string name="launcherdisabled">Launcher disabled. Restart required on some devices.</string>
 </resources>
