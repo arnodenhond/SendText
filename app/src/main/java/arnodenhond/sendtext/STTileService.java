@@ -24,7 +24,7 @@ public class STTileService extends TileService {
         Notification.Action inputAction = new Notification.Action.Builder(null, getString(R.string.type), intent).addRemoteInput(input).build();
         Notification.Builder builder = new Notification.Builder(this);
         builder.setPriority(Notification.PRIORITY_MAX);
-        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setSmallIcon(R.drawable.ic_insert_comment_black_48dp);
         builder.setVisibility(Notification.VISIBILITY_PUBLIC);
         builder.setCategory(Notification.CATEGORY_MESSAGE);
         builder.setActions(pasteAction, inputAction);
