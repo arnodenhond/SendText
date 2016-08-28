@@ -20,21 +20,21 @@ public class SendText extends Activity {
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
         Bundle remoteInput = RemoteInput.getResultsFromIntent(getIntent());
-        String text = null;
-        if (remoteInput!=null) {
-            text = remoteInput.getCharSequence(getString(R.string.app_name)).toString();
+        CharSequence text = null;
+        if (remoteInput != null) {
+            text = remoteInput.getCharSequence(getString(R.string.app_name));
         } else {
             ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
             if (clipboardManager.hasPrimaryClip() && clipboardManager.getPrimaryClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-                text = clipboardManager.getPrimaryClip().getItemAt(0).getText().toString();
+                text = clipboardManager.getPrimaryClip().getItemAt(0).getText();
             }
         }
-        if (text==null) {
-            Toast.makeText(this,R.string.clipboardempty, Toast.LENGTH_SHORT).show();
+        if (text == null) {
+            Toast.makeText(this, R.string.clipboardempty, Toast.LENGTH_SHORT).show();
         } else {
             sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.putExtra(Intent.EXTRA_TEXT, text);
+            intent.putExtra(Intent.EXTRA_TEXT, text.toString());
             intent.setType("text/plain");
             Intent chooser = Intent.createChooser(intent, text);
             startActivity(chooser);

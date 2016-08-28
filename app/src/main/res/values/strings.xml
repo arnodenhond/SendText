@@ -2,8 +2,8 @@
     <string name="app_name">SendText</string>
     <string name="header">%1$s %2$s by Arno den Hond © 2016</string>
     <string name="infoheader">Send Text to any app that can send text</string>
-    <string name="infomarshmallow"><b>Floating Text Selection Toolbar</b>\nSelect text to send in any app.\nFrom the floating text selection toolbar\'s overflow menu, select SendText.\nSelect the app or contact to send the text to.\nLong-press this text to try it out now!</string>
-    <string name="infonougat"><b>Quick Settings Tile \u0026 Notification</b>\nTo add the SendText tile to the Quick Settings Panel, fully open the notification drawer and select EDIT at the bottom.\nScroll to the bottom of the tiles list and drag the SendText tile to the top.\nTap the SendText tile to open the notification.\nPaste or type the text to send in the notification.\nSelect the app or contact to send the text to.</string>
+    <string name="infomarshmallow"><b>Text Selection Toolbar</b>\nLong-press to select the text to send from any app.\nExpand the text selection toolbar\'s overflow menu and select SENDTEXT.\nSelect the app or contact to send the text to.</string>
+    <string name="infonougat"><b>Quick Settings Tile \u0026 Notification</b>\nTo add the SendText tile to the Quick Settings Panel, fully open the notification drawer and select EDIT at the bottom.\nScroll to the bottom of the tiles panel and drag the SendText tile to the top.\nSelect the SendText tile to show the notification, then paste or type the text to send.\nSelect the app or contact to send the text to.</string>
     <string name="infofooter">This app is completely free and has no advertisements or background activities.</string>
     <string name="infosubfooter">Please support open-source software https://github.com/arnodenhond/SendText</string>
     <string name="sharelink">Share this app</string>
