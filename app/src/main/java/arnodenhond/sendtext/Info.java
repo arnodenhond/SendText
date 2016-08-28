@@ -32,7 +32,7 @@ public class Info extends Activity {
     }
 
     private void hideNougat() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
             findViewById(R.id.infonougat).setVisibility(View.GONE);
             findViewById(R.id.imagenougat).setVisibility(View.GONE);
             findViewById(R.id.dividernougat).setVisibility(View.GONE);
