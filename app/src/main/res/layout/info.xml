@@ -2,40 +2,69 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_gravity="center" >
+    android:layout_gravity="center">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dip" >
+        android:padding="10dip">
 
         <TextView
             android:id="@+id/infoheader"
-            style="@android:style/TextAppearance.Medium"
+            style="@android:style/TextAppearance.Large"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:autoLink="all"
             android:text="@string/infoheader" />
 
-        <Button
-            android:id="@+id/disablelauncher"
+        <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@android:drawable/ic_menu_close_clear_cancel"
-            android:onClick="disablelauncher"
-            android:text="@string/disablelauncher" />
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dim_dark" />
 
         <TextView
+            android:id="@+id/infomarshmallow"
             style="@android:style/TextAppearance.Medium"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:autoLink="all"
-            android:text="@string/infobody" />
+            android:text="@string/infomarshmallow" />
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:src="@drawable/toolbar" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/divider_horizontal_dark" />
+
+        <TextView
+            android:id="@+id/infonougat"
+            style="@android:style/TextAppearance.Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/infonougat" />
+
+        <ImageView
+            android:id="@+id/imagenougat"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quicksettings" />
+
+        <ImageView
+            android:id="@+id/dividernougat"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="5dip"
@@ -64,13 +93,6 @@
             android:drawableLeft="@android:drawable/ic_menu_edit"
             android:onClick="postcomment"
             android:text="@string/postcomment" />
-
-        <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@android:drawable/ic_menu_preferences"
-            android:onClick="showappsettings"
-            android:text="@string/appsettings" />
 
         <TextView
             style="@android:style/TextAppearance.Medium"

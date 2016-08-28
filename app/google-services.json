@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "884250384191",
+    "firebase_url": "https://send-text.firebaseio.com",
+    "project_id": "send-text",
+    "storage_bucket": "send-text.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884250384191:android:683868c5fe765254",
+        "android_client_info": {
+          "package_name": "arnodenhond.sendtext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884250384191-l4i3o787082nmue20iline6agpns3m3h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-xTla62vViwWEF9wa_eMBq9D-y6Y9KM0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

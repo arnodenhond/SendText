@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">SendText</string>
-    <string name="header">%1$s v%2$d by Arno den Hond © 2016</string>
-    <string name="infoheader">This app only provides a launcher shortcut to show the instructions below.</string>
-    <string name="infobody"><b>Send Text to any app that can send text.</b>\nThis app can be used in two ways:\n<li>Select text in any app that you want to send to another app.\nFrom the floating text selection toolbar overflow menu select SendText.\nSelect your destination and the app will appear with your text pre-filled.</li>\n<li>Edit the Quick Settings Tiles and add SendText\nSelect the SendText Tile and paste or type the text in the notification.\nSelect your destination and the app will appear with your text pre-filled.</li></string>
-    <string name="infofooter">Please support open source software\nhttps://github.com/arnodenhond/SendText</string>
-    <string name="infosubfooter">Press back to close this screen.</string>
+    <string name="header">%1$s %2$s by Arno den Hond © 2016</string>
+    <string name="infoheader">Send Text to any app that can send text</string>
+    <string name="infomarshmallow"><b>Floating Text Selection Toolbar</b>\nSelect text to send in any app.\nFrom the floating text selection toolbar\'s overflow menu, select SendText.\nSelect the app or contact to send the text to.\nLong-press this text to try it out now!</string>
+    <string name="infonougat"><b>Quick Settings Tile \u0026 Notification</b>\nTo add the SendText tile to the Quick Settings Panel, fully open the notification drawer and select EDIT at the bottom.\nScroll to the bottom of the tiles list and drag the SendText tile to the top.\nTap the SendText tile to open the notification.\nPaste or type the text to send in the notification.\nSelect the app or contact to send the text to.</string>
+    <string name="infofooter">This app is completely free and has no advertisements or background activities.</string>
+    <string name="infosubfooter">Please support open-source software https://github.com/arnodenhond/SendText</string>
     <string name="sharelink">Share this app</string>
     <string name="postcomment">Post a rating</string>
-    <string name="appsettings">App settings</string>
-    <string name="disablelauncher">Disable launcher shortcut</string>
-    <string name="launcherdisabled">Launcher disabled. Restart required on some devices.</string>
+    <string name="clipboardempty">Clipboard contains no text to paste!</string>
+    <string name="paste">Paste</string>
+    <string name="type">Type</string>
 </resources>

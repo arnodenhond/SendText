@@ -23,14 +23,14 @@ public class STTileService extends TileService {
 
         PendingIntent intent = PendingIntent.getActivity(this,0,new Intent(this,SendText.class),PendingIntent.FLAG_UPDATE_CURRENT);
 
-        String appname = getString(R.string.app_name);
-        RemoteInput input = new RemoteInput.Builder(appname).build();
-        Notification.Action pasteAction = new Notification.Action.Builder(null,"paste",intent).build();
-        Notification.Action inputAction = new Notification.Action.Builder(null,"type",intent).addRemoteInput(input).build();
+        RemoteInput input = new RemoteInput.Builder(getString(R.string.app_name)).build();
+        Notification.Action pasteAction = new Notification.Action.Builder(null,getString(R.string.paste),intent).build();
+        Notification.Action inputAction = new Notification.Action.Builder(null,getString(R.string.type),intent).addRemoteInput(input).build();
         Notification.Builder builder = new Notification.Builder(this);
         builder.setPriority(Notification.PRIORITY_MAX);
         builder.setSmallIcon(R.drawable.ic_insert_comment_black_48dp);
-        builder.setVisibility(Notification.VISIBILITY_SECRET);
+        builder.setVisibility(Notification.VISIBILITY_PUBLIC);
+        builder.setCategory(Notification.CATEGORY_MESSAGE);
         builder.setActions(pasteAction, inputAction);
         Notification notification = builder.build();
 
@@ -39,4 +39,5 @@ public class STTileService extends TileService {
         getQsTile().setState(Tile.STATE_INACTIVE);
         getQsTile().updateTile();
     }
+
 }

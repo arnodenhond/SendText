@@ -30,8 +30,9 @@ public class SendText extends Activity {
             }
         }
         if (text==null) {
-            Toast.makeText(this,"Clipboard empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,R.string.clipboardempty, Toast.LENGTH_SHORT).show();
         } else {
+            sendBroadcast(new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.putExtra(Intent.EXTRA_TEXT, text);
             intent.setType("text/plain");
