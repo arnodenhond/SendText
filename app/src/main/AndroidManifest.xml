@@ -32,7 +32,8 @@
 
         <activity
             android:name=".Info"
-            android:theme="@android:style/Theme.Material">
+            android:noHistory="true"
+            android:theme="@android:style/Theme.DeviceDefault">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

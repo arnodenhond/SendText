@@ -3,7 +3,6 @@ package arnodenhond.sendtext;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.RemoteInput;
-import android.content.ClipDescription;
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,8 +24,8 @@ public class SendText extends Activity {
             text = remoteInput.getCharSequence(getString(R.string.app_name));
         } else {
             ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            if (clipboardManager.hasPrimaryClip() && clipboardManager.getPrimaryClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) {
-                text = clipboardManager.getPrimaryClip().getItemAt(0).getText();
+            if (clipboardManager.hasPrimaryClip() && clipboardManager.getPrimaryClip().getItemCount() > 0) {
+                text = clipboardManager.getPrimaryClip().getItemAt(0).coerceToText(this);
             }
         }
         if (text == null) {

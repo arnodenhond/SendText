@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.android.gms.appinvite.AppInviteInvitation;
-
 /**
  * Created by arnodenhond on 19/07/16.
  */
@@ -46,8 +44,12 @@ public class Info extends Activity {
     }
 
     public void shareurl(View v) {
-        Intent intent = new AppInviteInvitation.IntentBuilder(getString(R.string.app_name)).setMessage(getString(R.string.infoheader)).build();
-        startActivityForResult(intent, 0);
+        String text = getString(R.string.app_name)+": "+getString(R.string.infoheader)+" https://play.google.com/store/apps/details?id="+getPackageName();
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        intent.setType("text/plain");
+        Intent chooser = Intent.createChooser(intent, text);
+        startActivity(chooser);
     }
 
 }

@@ -8,7 +8,7 @@
     <string name="infosubfooter">Please support open-source software https://github.com/arnodenhond/SendText</string>
     <string name="sharelink">Share this app</string>
     <string name="postcomment">Post a rating</string>
-    <string name="clipboardempty">Clipboard contains no text to paste!</string>
+    <string name="clipboardempty">Clipboard empty!</string>
     <string name="paste">Paste</string>
     <string name="type">Type</string>
 </resources>

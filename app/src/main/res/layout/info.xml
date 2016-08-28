@@ -83,14 +83,14 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@android:drawable/ic_menu_share"
+            android:drawableStart="@android:drawable/ic_menu_share"
             android:onClick="shareurl"
             android:text="@string/sharelink" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:drawableStart="@android:drawable/ic_menu_edit"
             android:onClick="postcomment"
             android:text="@string/postcomment" />
 
