@@ -1,18 +1,28 @@
 # SendText
-Send Text allows you to send text to any app that can send text
-This app can be used in two ways:
+*Send Text to any app that can send text*
 
-Marshmallow
-1) Select text in any app that you want to send to another app.
-From the floating text selection toolbar overflow menu select SENDTEXT
-Select your destination and the app will appear with your text pre-filled.
+### Text Selection Toolbar
+Long-press to select the text to send from any app.
 
-Nougat
-2) Start by tapping the Send Text Quick Settings Tile.
-A notification will appear in which you can type or paste the text to send.
-Select your destination and the app will appear with your text pre-filled.
-Important: To enable Send Text you must add the Quick Settings Tile.
+Expand the text selection toolbar’s overflow menu and select SENDTEXT
 
-Send Text is only 15kb and has no permissions, background activities or advertisements.
+Select the app or contact to send the text to.
 
-https://play.google.com/store/apps/details?id=arnodenhond.sendtext
+![Text Selection Toolbar](https://raw.githubusercontent.com/arnodenhond/SendText/master/app/src/main/res/drawable/toolbar.png)
+
+### Quick Settings Tile & Notification
+To add the SendText tile to the Quick Settings Panel, fully open the notification drawer and select EDIT at the bottom.
+
+Scroll to the bottom of the tiles panel and drag the SendText tile to the top.
+
+Select the SendText tile to show the notification, then paste or type the text to send.
+
+Select the app or contact to send the text to.
+
+![Quick Settings Panel](https://raw.githubusercontent.com/arnodenhond/SendText/master/app/src/main/res/drawable/quicksettings.png)
+
+
+
+> This app is completely free and has no advertisements or background activities.
+
+> [SendText on Google Play](https://play.google.com/store/apps/details?id=arnodenhond.sendtext)
