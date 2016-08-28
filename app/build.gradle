@@ -8,8 +8,8 @@ android {
         applicationId "arnodenhond.sendtext"
         minSdkVersion 23
         targetSdkVersion 24
-        versionCode 16
-        versionName "v16"
+        versionCode 17
+        versionName "v17"
     }
     buildTypes {
         release {
