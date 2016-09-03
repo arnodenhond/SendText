@@ -1,0 +1,77 @@
+SendText sends text to any app that can send text
+Type first, select app or contact later
+
+
+✓ Need to store a note but don't want to get sidetracked searching for the app it goes in?
+✓ Want to send a message to someone but lost track of which app you talk on?
+<b>SendText is the solution to your confusion!</b>
+
+Select some text you are interested in to get the <i>Text Selection Toolbar</i> — do NOT press copy!
+From the toolbar's menu, select SendText and a list of your favourite apps and contacts will appear.
+Select the destination for your text and the appropriate app will appear with your text pre filled.
+You only need to hit send or save — Done!
+
+Add the SendText tile to your <i>Quick Settings</i><b><sup>*</sup></b> to send text without even leaving the app you're in.
+Tapping the tile will open a notification in which you can paste or type your text.
+Choose what you want to do with the text to instantly get directed to your destination.
+Verify that your text has been processed — Mission accomplished!
+
+<sup>*</sup> Quick Settings tile on Android Nougat 7.0+ only
+
+★ Free — money back guaranteed
+★ Quick — don't waste time searching through unused apps or contacts.
+★ Easy — you'll get the hang of it instantly
+★ No advertisements — you won't get brainwashed
+★ No background activities — won't slow down your system
+★ No permissions — no viruses
+★ Occupies only 50kb of memory space — about 5% of one picture
+
+"SendText is the prettiest button on my telephone!" — my grandmom
+"Forget copy and paste, just get SendText!" — CNN
+"After examining the speed of SendText, I need to adjust my theorems on lightspeed" — A. Einstein
+"Open-source software is the way of truth and light" — my coding sensei
+
+Made with &hearts; by an independent developer on evenings and weekends — <b>please send feedback!</b>
+Source code: http://github.com/arnodenhond/SendText
+
+
+
+
+
+
+
+Stuur tekst naar elke app die tekst stuurt
+Eerst typen, dan pas een app kiezen
+
+
+✓ Moet je een notitie opslaan maar je wil niet afgeleid worden door het zoeken naar de app waar het in moet?
+✓ Wil je iemand een bericht sturen maar ben je vergeten met welke app jullie praten?
+<b>StuurTekst is de oplossing voor uw verwarring!</b>
+
+Selecteer de tekst waar je in geïnteresseerd  bent in de <i>Text Selectie Toolbar</i> — druk NIET op kopieren!
+Vanuit het menu van de toolbar kies je StuurTekst en een lijst van je favoriete apps en contact personen verschijnt.
+Selecteer de bestemming voor je tekst en de relevante app zal verschijnen met je tekst voor ingevuld.
+Je hoeft alleen maar op sturen of opslaan te drukken — Klaar!
+
+Voeg de StuurTekst knop toe aan je <i>Quick Settings</i><b><sup>*</sup></b> om tekst te sturen zonder zelfs maar de app waar je in bent te hoeven verlaten.
+Druk op de knop om een notificatie te openen waarin je kan tekst kan plakken of typen.
+Kies wat je met de tekst wil doen en je wordt direct naar de juiste bestemming gestuurd.
+Controleer dat je tekst verwerkt is — Missie volbracht!
+
+<sup>*</sup> Quick Settings tegel alleen op Android Nougat 7.0
+
+★ Gratis — niet goed, geld terug
+★ Snel — verspil geen tijd met het bladeren door ongebruikte apps of contact personen.
+★ Makkelijk — je krijgt het direct onder de knie
+★ Geen reclame — je wordt niet gehersenspoeld
+★ Geen achtergrond activiteiten — je systeem wordt niet vertraagd
+★ Geen permissies — geen virussen
+★ Beslaat slechts 50kb geheugen capaciteit — ongeveer 5% van een foto
+
+"StuurTekst is de mooiste knop op mijn telefoon!" — Mijn oma
+"Vergeet kopiëren en plakken maar, gebruik gewoon StuurTekst!" — NOS
+"Na het bestuderen van StuurTekst moet ik mijn theorie over de lichtsnelheid aanpassen" — A. Einstein
+"Open-source programmas zijn het pad naar de waarheid en het licht" — Mijn programmeer guru
+
+Gemaakt met &hearts; door een onafhankelijke ontwikkelaar 's avonds en in het weekend — <b>gelieve feedback te geven!</b>
+Broncode: http://github.com/arnodenhond/SendText

@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "arnodenhond.sendtext"
-        minSdkVersion 23
+        minSdkVersion 16
         targetSdkVersion 24
-        versionCode 17
-        versionName "v17"
+        versionCode 19
+        versionName "v19"
     }
     buildTypes {
         release {

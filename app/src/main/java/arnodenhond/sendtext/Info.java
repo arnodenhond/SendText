@@ -1,12 +1,16 @@
 package arnodenhond.sendtext;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 /**
@@ -14,19 +18,69 @@ import android.widget.TextView;
  */
 public class Info extends Activity {
 
+    private Switch enabled;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
+
         String version = new String();
         try {
             version = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException nnfe) {
         }
+        setTitle(String.format(getString(R.string.header), getString(R.string.app_name), version));
+
+        enabled = (Switch) findViewById(R.id.enabled);
+
+        ((TextView) findViewById(R.id.infojellybean)).setTextIsSelectable(true);
         ((TextView) findViewById(R.id.infonougat)).setTextIsSelectable(true);
         ((TextView) findViewById(R.id.infomarshmallow)).setTextIsSelectable(true);
+
+        hideMarshmallow();
         hideNougat();
-        setTitle(String.format(getString(R.string.header), getString(R.string.app_name), version));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        enabled.setChecked(getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).getBoolean(BootReceiver.CLIP_LISTENER_ON, false));
+        enabled.setOnCheckedChangeListener(switchListener);
+        getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).registerOnSharedPreferenceChangeListener(preferenceChangeListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
+    }
+
+    CompoundButton.OnCheckedChangeListener switchListener = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.cancelAll();
+            getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).edit().putBoolean(BootReceiver.CLIP_LISTENER_ON, b).commit();
+            sendBroadcast(new Intent(Info.this, BootReceiver.class));
+        }
+    };
+
+    SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            enabled.setOnCheckedChangeListener(null);
+            enabled.setChecked(sharedPreferences.getBoolean(s, false));
+            enabled.setOnCheckedChangeListener(switchListener);
+        }
+    };
+
+    private void hideMarshmallow() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            findViewById(R.id.infomarshmallow).setVisibility(View.GONE);
+            findViewById(R.id.imagemarshmallow).setVisibility(View.GONE);
+            findViewById(R.id.dividermarshmallow).setVisibility(View.GONE);
+        }
     }
 
     private void hideNougat() {
@@ -41,15 +95,6 @@ public class Info extends Activity {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("market://details?id=" + getPackageName()));
         startActivity(intent);
-    }
-
-    public void shareurl(View v) {
-        String text = getString(R.string.app_name)+": "+getString(R.string.infoheader)+" https://play.google.com/store/apps/details?id="+getPackageName();
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_TEXT, text);
-        intent.setType("text/plain");
-        Intent chooser = Intent.createChooser(intent, text);
-        startActivity(chooser);
     }
 
 }

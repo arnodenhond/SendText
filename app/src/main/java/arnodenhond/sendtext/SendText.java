@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.app.RemoteInput;
 import android.content.ClipboardManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -18,7 +19,10 @@ public class SendText extends Activity {
         super.onCreate(savedInstanceState);
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
-        Bundle remoteInput = RemoteInput.getResultsFromIntent(getIntent());
+        Bundle remoteInput = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            RemoteInput.getResultsFromIntent(getIntent());
+        }
         CharSequence text = null;
         if (remoteInput != null) {
             text = remoteInput.getCharSequence(getString(R.string.app_name));

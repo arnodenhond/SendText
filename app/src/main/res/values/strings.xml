@@ -2,13 +2,17 @@
     <string name="app_name">SendText</string>
     <string name="header">%1$s %2$s by Arno den Hond © 2016</string>
     <string name="infoheader">Send Text to any app that can send text</string>
+    <string name="infojellybean"><b>Clipboard \u0026 Notification</b>\nShow a notification when text is pasted to the clipboard.\nTap the notification to send text from the clipboard.</string>
     <string name="infomarshmallow"><b>Text Selection Toolbar</b>\nLong-press to select the text to send from any app.\nExpand the text selection toolbar\'s overflow menu and select SENDTEXT.\nSelect the app or contact to send the text to.</string>
     <string name="infonougat"><b>Quick Settings Tile \u0026 Notification</b>\nTo add the SendText tile to the quick settings panel, open the notification drawer and select EDIT at the bottom.\nScroll to the bottom of the tiles panel and drag the SendText tile to the top.\nTap the SendText tile to show the notification, then paste or type the text to send.\nSelect the app or contact to send the text to.</string>
-    <string name="infofooter">SendText is completely free and has no advertisements or background activities.</string>
-    <string name="infosubfooter">Please support open-source software https://github.com/arnodenhond/SendText</string>
-    <string name="sharelink">Share this app</string>
-    <string name="postcomment">Post a rating</string>
+    <string name="infofooter">Development of this app has cost numerous evenings and several weekends.\nYet it is completely free and has no advertisements.</string>
+    <string name="infosubfooter">Feature requests and improvement suggestions\nhttps://github.com/arnodenhond/SendText/issues</string>
+    <string name="postcomment">Thanks!</string>
     <string name="clipboardempty">Clipboard empty!</string>
     <string name="paste">Paste</string>
     <string name="type">Type</string>
+    <string name="speak">Speak</string>
+    <string name="useclipboard">Use clipboard\u00a0\u00a0</string>
+    <string name="taptoshare">Tap to send</string>
+    <string name="disableclipboard">Stop showing this</string>
 </resources>
