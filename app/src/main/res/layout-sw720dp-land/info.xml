@@ -12,6 +12,7 @@
         android:padding="50dip">
 
         <TextView
+            android:textSize="30dp"
             android:id="@+id/infoheader"
             style="@android:style/TextAppearance.Large"
             android:layout_width="fill_parent"
@@ -34,6 +35,7 @@
                 android:padding="50dp">
 
                 <TextView
+                    android:textSize="20dp"
                     android:id="@+id/infomarshmallow"
                     style="@android:style/TextAppearance.Medium"
                     android:layout_width="fill_parent"
@@ -62,6 +64,7 @@
                 android:padding="50dp">
 
                 <TextView
+                    android:textSize="20dp"
                     android:id="@+id/infonougat"
                     style="@android:style/TextAppearance.Medium"
                     android:layout_width="fill_parent"
@@ -92,6 +95,7 @@
             style="@android:style/TextAppearance.Medium"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:textSize="30dp"
             android:layout_gravity="center"
             android:autoLink="all"
             android:gravity="center_horizontal"
@@ -112,6 +116,7 @@
             android:text="@string/postcomment" />
 
         <TextView
+            android:textSize="30dp"
             style="@android:style/TextAppearance.Medium"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

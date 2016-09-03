@@ -8,7 +8,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dip">
+        android:padding="50dip">
 
         <TextView
             android:id="@+id/infoheader"
@@ -16,35 +16,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/infoheader" />
+            android:text="@string/infoheader"
+            android:textSize="50dp" />
 
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip"
-            android:scaleType="fitXY"
-            android:src="@android:drawable/divider_horizontal_dim_dark" />
-        <TextView
-            android:id="@+id/infojellybean"
-            style="@android:style/TextAppearance.Medium"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/infojellybean" />
-        <Switch
-            android:id="@+id/enabled"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:text="@string/useclipboard" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip"
+            android:paddingBottom="25dip"
+            android:paddingTop="25dip"
             android:scaleType="fitXY"
             android:src="@android:drawable/divider_horizontal_dim_dark" />
 
@@ -54,21 +33,20 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/infomarshmallow" />
+            android:text="@string/infomarshmallow"
+            android:textSize="30dp" />
 
         <ImageView
-            android:id="@+id/imagemarshmallow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/toolbar" />
 
         <ImageView
-            android:id="@+id/dividermarshmallow"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip"
+            android:paddingBottom="25dip"
+            android:paddingTop="25dip"
             android:scaleType="fitXY"
             android:src="@android:drawable/divider_horizontal_dark" />
 
@@ -78,7 +56,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/infonougat" />
+            android:text="@string/infonougat"
+            android:textSize="30dp" />
 
         <ImageView
             android:id="@+id/imagenougat"
@@ -91,8 +70,8 @@
             android:id="@+id/dividernougat"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="15dip"
-            android:paddingTop="15dip"
+            android:paddingBottom="25dip"
+            android:paddingTop="25dip"
             android:scaleType="fitXY"
             android:src="@android:drawable/divider_horizontal_dark" />
 
@@ -102,13 +81,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:autoLink="all"
-            android:text="@string/infofooter" />
+            android:text="@string/infofooter"
+            android:textSize="30dp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_share"
+            android:onClick="shareurl"
+            android:text="@string/sharelink" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_menu_edit"
             android:onClick="postcomment"
-            android:layout_gravity="center_horizontal"
             android:text="@string/postcomment" />
 
         <TextView
@@ -117,7 +104,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:autoLink="all"
-            android:text="@string/infosubfooter" />
+            android:text="@string/infosubfooter"
+            android:textSize="30dp" />
     </LinearLayout>
 
 </ScrollView>
