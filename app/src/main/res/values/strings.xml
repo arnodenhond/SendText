@@ -2,7 +2,7 @@
     <string name="app_name">SendText</string>
     <string name="header">%1$s %2$s by Arno den Hond © 2016</string>
     <string name="infoheader">Send Text to any app that can send text</string>
-    <string name="infojellybean"><b>Clipboard \u0026 Notification</b>\nShow a notification when text is cut or copied to the clipboard.\nTap the notification to the send text directly from the clipboard.</string>
+    <string name="infojellybean"><b>Clipboard \u0026 Notification</b>\nA notification is shown when text is cut or copied to the clipboard.\nTap the notification to the send the text directly from the clipboard.</string>
     <string name="infomarshmallow"><b>Text Selection Toolbar</b>\nLong-press to select the text to send from any app.\nExpand the text selection toolbar\'s overflow menu and select SENDTEXT.\nSelect the app or contact to send the text to.</string>
     <string name="infonougat"><b>Quick Settings Tile \u0026 Notification</b>\nTo add the SendText tile to the quick settings panel, open the notification drawer and select EDIT at the bottom.\nScroll to the bottom of the tiles panel and drag the SendText tile to the top.\nTap the SendText tile to show the notification, then paste or type the text to send.\nSelect the app or contact to send the text to.</string>
     <string name="infofooter">Development of this app has cost numerous evenings and several weekends.\nYet it is completely free and has no advertisements.</string>
