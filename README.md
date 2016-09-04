@@ -39,12 +39,10 @@ Source code: http://github.com/arnodenhond/SendText
 
 ![Feature Graphic](https://raw.githubusercontent.com/arnodenhond/SendText/master/app/Send%20Text-feature-graphic.png)
 
-
-
 # SendText
 *Send Text to any app that can send text*
 
-### Clipboard \u0026 Notification
+### Clipboard & Notification
 A notification is shown when text is cut or copied to the clipboard.  
 Tap the notification to the send the text directly from the clipboard.
 
@@ -63,13 +61,9 @@ Select the app or contact to send the text to.
 
 ![Quick Settings Panel](https://raw.githubusercontent.com/arnodenhond/SendText/master/app/src/main/res/drawable/quicksettings.png)
 
-Development of this app has cost several evenings and weekends.  
-Yet it is completely free and has no advertisements.  
-Say thank you with a rating
-
-
-> This app is completely free and has no advertisements or background activities.
-
+> Development of this app has cost several evenings and weekends.  
+> Yet it is completely free and has no advertisements.  
+> Say thank you with a rating
 > [SendText on Google Play](https://play.google.com/store/apps/details?id=arnodenhond.sendtext)
 
 
