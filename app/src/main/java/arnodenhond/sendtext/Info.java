@@ -87,10 +87,7 @@ public class Info extends Activity {
     }
 
     public void postcomment(View v) {
-        getSharedPreferences(SayThanks.SAYTHANKS, MODE_PRIVATE).edit().putBoolean(SayThanks.THANKSDONE, true).commit();
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("market://details?id=" + getPackageName()));
-        startActivity(intent);
+        startActivity(new Intent(this,SayThanks.class));
     }
 
 }
