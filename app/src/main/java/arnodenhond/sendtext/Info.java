@@ -1,7 +1,6 @@
 package arnodenhond.sendtext;
 
 import android.app.Activity;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -18,7 +17,22 @@ import android.widget.TextView;
  */
 public class Info extends Activity {
 
+    CompoundButton.OnCheckedChangeListener switchListener = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+            getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).edit().putBoolean(BootReceiver.CLIP_LISTENER_ON, b).commit();
+            sendBroadcast(new Intent(Info.this, BootReceiver.class));
+        }
+    };
     private Switch enabled;
+    SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            enabled.setOnCheckedChangeListener(null);
+            enabled.setChecked(sharedPreferences.getBoolean(s, false));
+            enabled.setOnCheckedChangeListener(switchListener);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,25 +70,6 @@ public class Info extends Activity {
         getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(preferenceChangeListener);
     }
 
-    CompoundButton.OnCheckedChangeListener switchListener = new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-            notificationManager.cancelAll();
-            getSharedPreferences(BootReceiver.CLIP_LISTENER_ON, MODE_PRIVATE).edit().putBoolean(BootReceiver.CLIP_LISTENER_ON, b).commit();
-            sendBroadcast(new Intent(Info.this, BootReceiver.class));
-        }
-    };
-
-    SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
-        @Override
-        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-            enabled.setOnCheckedChangeListener(null);
-            enabled.setChecked(sharedPreferences.getBoolean(s, false));
-            enabled.setOnCheckedChangeListener(switchListener);
-        }
-    };
-
     private void hideMarshmallow() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             findViewById(R.id.infomarshmallow).setVisibility(View.GONE);
@@ -92,6 +87,7 @@ public class Info extends Activity {
     }
 
     public void postcomment(View v) {
+        getSharedPreferences(SayThanks.SAYTHANKS, MODE_PRIVATE).edit().putBoolean(SayThanks.THANKSDONE, true).commit();
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("market://details?id=" + getPackageName()));
         startActivity(intent);

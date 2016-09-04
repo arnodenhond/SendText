@@ -13,12 +13,9 @@ public class ProcessText extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         CharSequence text = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.putExtra(Intent.EXTRA_TEXT, text);
-        intent.setType("text/plain");
-        Intent chooser = Intent.createChooser(intent, text);
-        startActivity(chooser);
+        SendText.sendText(text, this);
         finish();
     }
+
 }
 

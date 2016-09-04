@@ -13,21 +13,60 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true">
+        <!-- app launcher -->
+        <activity
+            android:name=".Info"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.DeviceDefault">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- boot receiver is also called when info's switch toggles -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- quick settings tile -->
+        <service
+            android:name=".STTileService"
+            android:icon="@drawable/ic_comment_white_48dp"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <!-- called by the tile notification's paste and type buttons -->
         <activity
             android:name=".SendText"
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:theme="@android:style/Theme.NoDisplay" />
+        <!-- called by the tile notification's speak button -->
         <activity
             android:name=".SpeakText"
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- called by the clipboard notification -->
+        <activity
+            android:name=".SendClipboard"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay" />
+        <!-- called by the clipboard notification's disable button -->
         <activity
             android:name=".DisableClipboard"
             android:excludeFromRecents="true"
             android:noHistory="true"
             android:theme="@android:style/Theme.NoDisplay" />
+        <!-- called by the text selection toolbar button -->
         <activity
             android:name=".ProcessText"
             android:excludeFromRecents="true"
@@ -42,34 +81,12 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
+        <!-- called by the thankyou notification's thankyou button -->
         <activity
-            android:name=".Info"
+            android:name=".SayThanks"
+            android:excludeFromRecents="true"
             android:noHistory="true"
-            android:theme="@android:style/Theme.DeviceDefault">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".STTileService"
-            android:icon="@drawable/ic_insert_comment_black_48dp"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name=".BootReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
+            android:theme="@android:style/Theme.NoDisplay" />
     </application>
 
 </manifest>

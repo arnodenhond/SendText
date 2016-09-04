@@ -3,17 +3,18 @@
     <string name="app_name">StuurTekst</string>
     <string name="clipboardempty">Klembord leeg!</string>
     <string name="header">%1$s %2$s door Arno den Hond © 2016</string>
-    <string name="infofooter">Ontwikkeling van deze app heeft vele avonden en verschillende weekenden gekost. Toch is het geheel gratis en bevat het geen advertenties.</string>
+    <string name="infofooter">Ontwikkeling van deze app heeft meerdere avonden en weekenden gekost. Toch is het geheel gratis en bevat het geen advertenties.</string>
     <string name="infoheader">Stuur Tekst aan iedere app die tekst kan sturen</string>
     <string name="infomarshmallow"><b>Tekst Selectie Toolbar</b>\nDruk lang om tekst te selecteren om aan iedere app te sturen.\nOpen het tekst selectie toolbar menu en selecteer STUURTEKST.\nSelecteer de app of contact persoon om de tekst aan te sturen.</string>
     <string name="infonougat"><b>Snelle Instelling Tegel \u0026 Notificatie</b>\nOm de StuurTekst tegel aan het snelle instellingen paneel toe te voegen, open het notificatie scherm en selecteer AANPASSEN onderaan.\nSchuif naar het einde van het tegels paneel en sleep de StuurTekst tegel naar boven.\nTik op de StuurTekst tegel om de notificatie te openen en plak of typ de tekst om te sturen.\nSelect the app or contact to send the text to.</string>
-    <string name="infosubfooter">Functie toevoegings verzoeken en verbeter voorstellen\nhttps://github.com/arnodenhond/SendText/issues</string>
+    <string name="infosubfooter">Functie verzoeken en verbeter voorstellen\nhttps://github.com/arnodenhond/SendText/issues</string>
     <string name="paste">Plakken</string>
-    <string name="postcomment">Bedankt!</string>
+    <string name="postcomment">Zeg bedankt met een waardering</string>
     <string name="type">Typen</string>
     <string name="speak">Spreken</string>
     <string name="infojellybean"><b>Klembord \u0026 Notificatie</b>\nToon een notificatie wanneer tekst in het klembord word geplakt.\nTik de notificatie aan om de tekst te sturen.</string>
     <string name="useclipboard">Klembord gebruiken\u00a0\u00a0</string>
     <string name="disableclipboard">Dit niet meer tonen</string>
     <string name="taptoshare">Tik aan om te sturen</string>
+    <string name="timesused">Je hebt SendText %1$d keer gebruikt</string>
 </resources>

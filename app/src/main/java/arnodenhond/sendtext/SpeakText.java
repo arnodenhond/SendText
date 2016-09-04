@@ -22,14 +22,10 @@ public class SpeakText extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.cancelAll();
+        notificationManager.cancel(STTileService.TILE_NOTIFICATION);
         if (data != null && data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS) != null) {
             String text = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0);
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.putExtra(Intent.EXTRA_TEXT, text.toString());
-            intent.setType("text/plain");
-            Intent chooser = Intent.createChooser(intent, text);
-            startActivity(chooser);
+            SendText.sendText(text, this);
         }
         finish();
     }
