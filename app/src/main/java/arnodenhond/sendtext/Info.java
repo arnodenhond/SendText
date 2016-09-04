@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -87,7 +87,7 @@ public class Info extends Activity {
     }
 
     public void postcomment(View v) {
-        startActivity(new Intent(this,SayThanks.class));
+        startActivity(new Intent(this, SayThanks.class));
     }
 
 }
